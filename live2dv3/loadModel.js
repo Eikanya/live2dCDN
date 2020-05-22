@@ -1,6 +1,6 @@
 var LIVE2DCUBISMCORE = Live2DCubismCore
 //var baseModelPath = window.location.protocol+'//cdn.'+ window.location.host+"/Resource/live2d/";
-var baseModelPath = "assets/" ;
+var baseModelPath = "https://cdn.jsdelivr.net/gh/Eikanya/live2dCDN@1.1/live2dv3/assets/" ;
 var modelNames = ["shengluyisi_3"];
 var modelPath;
 var app;
@@ -44,7 +44,7 @@ function loadMotions(motions){
 function loadModel(){
     //var modelName =  "shengluyisi_3";
 	var modelName =  modelNames[Math.floor(Math.random() * modelNames.length )];
-    modelPath =  "../live2dv3/assets/" + modelName +"/"+ modelName + ".model3.json";
+    modelPath =  baseModelPath + modelName +"/"+ modelName + ".model3.json";
     var ajax = null;
     if(window.XMLHttpRequest){ajax = new XMLHttpRequest();}else if(window.ActiveObject){
         ajax = new ActiveXObject("Microsoft.XMLHTTP");
